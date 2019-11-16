@@ -1,12 +1,11 @@
 import java.util.Scanner;
 class apples{
 	public static void main(String args[]) {
-		Scanner bucky = new Scanner(System.in);
-		int girls, boys, people;
-		girls = 11;
-		boys = 3;
-		people = girls/boys;
+		int tuna= 5;
+		int bass = 18;
 		
-		System.out.println(people);
+		tuna *= 8;
+		
+		System.out.println(tuna);
 	}
 }
