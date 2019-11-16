@@ -1,11 +1,13 @@
 class apples{
 	public static void main(String args[]) {
-		int test = 6;
+		int boy, girl;
+		boy = 8;
+		girl = 99;
 		
-		if (test == 6) {
-			System.out.println("yes");
+		if (boy > 10 || girl < 60) {
+			System.out.println("You can enter");
 		}else {
-			System.out.println("this is else");
+			System.out.println("You can not enter");
 		}
 	}
 }
