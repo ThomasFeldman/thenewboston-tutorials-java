@@ -1,11 +1,11 @@
-import java.util.Scanner;
 class apples{
 	public static void main(String args[]) {
-		int tuna= 5;
-		int bass = 18;
+		int test = 6;
 		
-		tuna *= 8;
-		
-		System.out.println(tuna);
+		if (test == 6) {
+			System.out.println("yes");
+		}else {
+			System.out.println("this is else");
+		}
 	}
 }
