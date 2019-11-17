@@ -1,6 +1,13 @@
+import java.util.Scanner;
 class apples{
 	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
 		tuna tunaObject = new tuna();
-		tunaObject.simpleMessage();
+
+		System.out.println("What is your name");
+		String name = input.nextLine();
+		
+		
+		tuna.simpleMessage(name);
 	}
 }
