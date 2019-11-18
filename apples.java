@@ -3,11 +3,10 @@ class apples{
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
 		tuna tunaObject = new tuna();
-
-		System.out.println("What is your name");
-		String name = input.nextLine();
 		
-		
-		tuna.simpleMessage(name);
+		System.out.println("Enter name of first gf here: ");
+		String temp = input.nextLine();
+		tunaObject.setName(temp);
+		tunaObject.saying();
 	}
 }
