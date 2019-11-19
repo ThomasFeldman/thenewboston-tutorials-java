@@ -1,8 +1,12 @@
-import java.util.Scanner;
 class apples{
 	public static void main(String args[]) {
-		for(int counter = 6; counter <= 21; counter+=3) {
-			System.out.println(counter);
+		double amount, principle, rate;
+		principle = 10000;
+		rate = .01;
+		
+		for (int day = 1; day <= 20; day++) {
+			amount = principle * Math.pow(1 + rate, day);
+			System.out.println(day + "     " + amount);
 		}
 	}
 }
