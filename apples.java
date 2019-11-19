@@ -1,7 +1,19 @@
+import java.util.Scanner;
 class apples{
 	public static void main(String args[]) {
-		int age = 21;
+		Scanner input = new Scanner(System.in);
+		int total, average, grade, counter;
+		total = 0;
+		counter = 0;
 		
-		System.out.println(age > 50 ? "You are old": "You are young");
+		while(counter < 10) {
+			grade = input.nextInt();
+			total += grade;
+			counter++;
+		}
+		
+		average = total/10;
+		
+		System.out.println("Your average is " + average);
 	}
 }
