@@ -1,11 +1,17 @@
+import java.util.Random;
 class apples{
 	public static void main(String args[]) {
-		int bucky[] = {21,16,86,21,3};
-		int sum=0;
+		Random rand = new Random();
+		int freq[]= new int[7];
 		
-		for (int counter=0; counter<bucky.length; counter++) {
-			sum += bucky[counter];
+		for(int roll=1; roll<1000; roll++) {
+			++freq[1+rand.nextInt(6)];
 		}
-		System.out.println("The sum of theze numbers is " + sum);
+		
+		System.out.println("Face\tFrequency");
+		
+		for(int face=1; face<freq.length; face++) {
+			System.out.println(face + "\t" + freq[face]);
+		}
 	}
 }
