@@ -1,12 +1,10 @@
 class apples{
 	public static void main(String args[]) {
-		double amount, principle, rate;
-		principle = 10000;
-		rate = .01;
+		int counter = 15;
 		
-		for (int day = 1; day <= 20; day++) {
-			amount = principle * Math.pow(1 + rate, day);
-			System.out.println(day + "     " + amount);
-		}
+		do {
+			System.out.println(counter);
+			counter++;
+		}while(counter <= 10);
 	}
 }
