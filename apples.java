@@ -1,15 +1,9 @@
 class apples{
 	public static void main(String args[]) {
-		System.out.print(average(43,56,76,8,65,76,2,31));
-	}
-	
-	public static int average(int...numbers) {
-		int total = 0;
+		tuna tunaObject = new tuna();
+		System.out.println(tunaObject.toMilitary());
 		
-		for(int x: numbers) {
-			total+=x;
-		}
-		
-		return total/numbers.length;
+		tunaObject.setTime(13, 27, 6);
+		System.out.println(tunaObject.toMilitary());
 	}
 }
