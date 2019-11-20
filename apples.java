@@ -1,17 +1,12 @@
-import java.util.Random;
 class apples{
 	public static void main(String args[]) {
-		Random rand = new Random();
-		int freq[]= new int[7];
+		int bucky[] = {3,4,5,6,7};
+		int total = 0;
 		
-		for(int roll=1; roll<1000; roll++) {
-			++freq[1+rand.nextInt(6)];
+		for(int x: bucky) {
+			total += x;
 		}
 		
-		System.out.println("Face\tFrequency");
-		
-		for(int face=1; face<freq.length; face++) {
-			System.out.println(face + "\t" + freq[face]);
-		}
+		System.out.println(total);
 	}
 }
