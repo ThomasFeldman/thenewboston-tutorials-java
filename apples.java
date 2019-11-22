@@ -11,5 +11,6 @@ class apples{
     	System.out.printf("%s\n", tunaObject3.toMilitary());
     	System.out.printf("%s\n", tunaObject4.toMilitary());
     	
+    	
     }
 }
