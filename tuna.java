@@ -27,7 +27,7 @@ public class tuna {
 		minute = ((m>=0&&m<60)?m:0);
 	}
 	public void setSecond(int s) {
-		second = ((s>=0&&s<60)?h:0);
+		second = ((s>=0&&s<60)?s:0);
 	}
 	public int getHour() {
 		return hour;
@@ -39,6 +39,6 @@ public class tuna {
 		return second;
 	}
 	public String toMilitary() {
-		return String.format("%02d:%02d:%02d", getHour(),getMinute(),getSecond())
+		return String.format("%02d:%02d:%02d", getHour(),getMinute(),getSecond());
 	}
 }
