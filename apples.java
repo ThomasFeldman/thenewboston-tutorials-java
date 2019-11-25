@@ -1,14 +1,10 @@
-import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 
 class apples{
     public static void main(String args[]){
-    	String fn = JOptionPane.showInputDialog("Enter first number");
-    	String sn = JOptionPane.showInputDialog("Enter second number");
-
-    	int num1 = Integer.parseInt(fn);
-    	int num2 = Integer.parseInt(sn);
-    	int sum = num1 + num2;
-    	
-    	JOptionPane.showMessageDialog(null, "The answer is " + sum, "the title", JOptionPane.PLAIN_MESSAGE);
-    }   
+    	tuna bucky = new tuna();
+    	bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	bucky.setSize(275,180);
+    	bucky.setVisible(true);
+    }
 }
