@@ -1,14 +1,12 @@
-import javax.swing.JFrame;
-
 class apples{
     public static void main(String args[]){
+    	fatty bucky = new fatty();
+    	food fo = new food();
+    	food po = new potpie();
     	
-    	food bucky[] = new food[2];
-    	bucky[0]=new potpie();
-    	bucky[1]=new tuna();
     	
-    	for(int x=0; x<2; ++x) {
-    		bucky[x].eat();
-    	}
+    	bucky.digest(fo);
+    	bucky.digest(po);
+
     }
 }
