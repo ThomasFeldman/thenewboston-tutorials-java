@@ -2,9 +2,13 @@ import javax.swing.JFrame;
 
 class apples{
     public static void main(String args[]){
-    	tuna bucky = new tuna();
-    	bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    	bucky.setSize(275,180);
-    	bucky.setVisible(true);
+    	
+    	food bucky[] = new food[2];
+    	bucky[0]=new potpie();
+    	bucky[1]=new tuna();
+    	
+    	for(int x=0; x<2; ++x) {
+    		bucky[x].eat();
+    	}
     }
 }
