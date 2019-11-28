@@ -1,37 +1,31 @@
-import java.awt.FlowLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class Gui extends JFrame{
-	private JButton reg;
-	private javax.swing.JButton custom;
+	private JTextField tf;
+	private JCheckBox boldbox;
+	private JCheckBox italicbox;
 	
 	public Gui() {
-		super("The title");
+		super("The Title");
 		setLayout(new FlowLayout());
-		
-		reg = new JButton("reg Button");
-		add(reg);
-		
-		Icon b = new ImageIcon(getClass().getResource("b.png"));
-		Icon x = new ImageIcon(getClass().getResource("x.png"));
-		custom = new JButton("Custom", b);
-		custom.setRolloverIcon(x);
-		add(custom);
+
+		tf = new JTextField("This is a sentence", 20);
+		tf.setFont(new Font("Serif", Font.PLAIN, 14));
+		add(tf);
+
+		boldbox = new JCheckBox("bold");
+		italicbox = new JCheckBox("italic");
+		add(boldbox);
+		add(italicbox);
 		
 		HandlerClass handler = new HandlerClass();
-		reg.addActionListener(handler);
-		custom.addActionListener(handler);
+		boldbox.addItemListener(handler);
+		italicbox.addItemListener(handler);
 	}
 	
-	private class HandlerClass implements ActionListener {
-		public void actionPerformed(ActionEvent event) {
-			JOptionPane.showMessageDialog(null, String.format("%s", event.getActionCommand()));
-		}		
-	}
+		private HandlerClass implements ItemListener {
+			
+		}
 }
