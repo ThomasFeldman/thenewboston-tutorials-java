@@ -40,5 +40,27 @@ public class Gui extends JFrame{
 		bf = new Font("Serif", Font.BOLD, 14);
 		itf = new Font("Serif", Font.ITALIC, 14);
 		bif = new Font("Serif", Font.BOLD + Font.ITALIC, 14	);
+		tf.setFont(pf);
+		
+		//wait for event to happen, pass in font object to constructor
+		pb.addItemListener(new HandlerClass(pf));
+		bb.addItemListener(new HandlerClass(bf));
+		ib.addItemListener(new HandlerClass(itf));
+		bib.addItemListener(new HandlerClass(bif));
+		
+	}
+	
+	private class HandlerClass implements ItemListener {
+		private Font font;
+		
+		//the font object gets variable font
+		public HandlerClass(Font f) {
+			font = f;
+		}
+		
+		//sets the font to the font object that was passed in
+		public void itemStateChanged(ItemEvent event) {
+			tf.setFont(font);
+		}
 	}
 }
