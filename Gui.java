@@ -25,7 +25,21 @@ public class Gui extends JFrame{
 		italicbox.addItemListener(handler);
 	}
 	
-		private HandlerClass implements ItemListener {
-			
-		}
+		private class HandlerClass implements ItemListener {
+			public void itemStateChanged(ItemEvent event) {
+				Font font = null;
+				
+				if(boldbox.isSelected() && italicbox.isSelected()) {
+					font = new Font("Serif", Font.BOLD + Font.ITALIC, 14);
+				}else if(boldbox.isSelected()) {
+					font = new Font("Serif", Font.BOLD, 14);
+				}else if(italicbox.isSelected()) {
+					font = new Font("Serif", Font.ITALIC, 14);
+				}else {
+					font = new Font("Serif", Font.PLAIN, 14);
+				}
+				
+				tf.setFont(font);
+			}
+	}
 }
