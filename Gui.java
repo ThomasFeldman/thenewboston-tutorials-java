@@ -29,5 +29,12 @@ public class Gui extends JFrame{
 		);
 		
 		add(movebutton);
+		
+		rightlist = new JList();
+		rightlist.setVisibleRowCount(3);
+		rightlist.setFixedCellWidth(100);
+		rightlist.setFixedCellHeight(15);
+		rightlist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		add(new JScrollPane(rightlist));
 	}
 }
