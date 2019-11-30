@@ -14,6 +14,18 @@ public class Gui extends JFrame{
 		
 		box = new JComboBox(filename);
 		
+		box.addItemListener(
+				 new ItemListener() {
+					 public void itemStateChanged(ItemEvent event) {
+						 if(event.getStateChange()==ItemEvent.SELECTED) {
+							 picture.setIcon(pics[box.getSelectedIndex()]);
+						 }
+					 }
+				 } 
+		);
 		
+		add(box);
+		picture = new JLabel(pics[0]);
+		add(picture);
 	}
 }
