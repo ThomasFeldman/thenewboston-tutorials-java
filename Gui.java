@@ -1,40 +1,23 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
 public class Gui extends JFrame{
-	
-	private JList leftlist;
-	private JList rightlist;
-	private JButton movebutton;
-	private static String[] foods = {"bacon", "wings", "ham", "beef", "morebacon"};
+	private JPanel mousepanel;
+	private JLabel statusbar;
 	
 	public Gui() {
 		super("title");
-		setLayout(new FlowLayout());
 		
-		leftlist = new JList(foods);
-		leftlist.setVisibleRowCount(3);
-		leftlist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		add(new JScrollPane(leftlist));
+		mousepanel = new JPanel();
+		mousepanel.setBackground(Color.WHITE);
+		add(mousepanel, BorderLayout.CENTER);
 		
-		movebutton = new JButton("Move -->");
-		movebutton.addActionListener(
-				new ActionListener() {
-					public void actionPerformed(ActionEvent event) {
-						rightlist.setListData(leftlist.getSelectedValues());
-					}
-				}
-		);
+		statusbar = new JLabel("default");
+		add(statusbar, BorderLayout.SOUTH);
 		
-		add(movebutton);
-		
-		rightlist = new JList();
-		rightlist.setVisibleRowCount(3);
-		rightlist.setFixedCellWidth(100);
-		rightlist.setFixedCellHeight(15);
-		rightlist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		add(new JScrollPane(rightlist));
+		Handlerclass handler = new Handlerclass();
+		mousepanel.addMouseListener(handler);
+		mousepanel.addMouseMotionListener(handler);
 	}
 }
