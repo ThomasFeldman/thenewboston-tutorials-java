@@ -20,4 +20,24 @@ public class Gui extends JFrame{
 		mousepanel.addMouseListener(handler);
 		mousepanel.addMouseMotionListener(handler);
 	}
+	
+	private class HandlerClass implements MouseListener, MouseMotionListener{
+		public void mouseClicked(MouseEvent event) {
+			statusbar.setText(String.format("Clicked at %d,%d", event.getX(), event.getY()));
+		}
+		public void mousePressed(MouseEvent event) {
+			statusbar.setText("you pressed down the mouse");
+		}
+		public void mouseReleased(MouseEvent event) {
+			statusbar.setText("you released the button");
+		}
+		public void mouseEntered(MouseEvent event) {
+			statusbar.setText("y0ou entered the area");
+			mousepanel.setBackground(Color.RED);
+		}
+		public void mouseExited(MouseEvent event) {
+			statusbar.setText("the mouse hasd left he window");
+			mousepanel.setBackground(Color.WHITE);
+		}
+	}
 }
