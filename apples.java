@@ -1,12 +1,17 @@
-import java.io.File;;
+import java.util.*;
+
 class apples{
 	public static void main(String args[]) {
-		File x = new File("C:\\test\\fhkdjsf.txt");
 		
-		if (x.exists()) {
-			System.out.println(x.getName() + "exist!");
-		}else {
-			System.out.println("this thing doestnt eisists");
+		final Formatter x;
+		
+		try {
+			x = new Formatter("fred.text");
+			System.out.println("you crested a file");
 		}
+		catch(Exception e) {
+			System.out.println("you got an error");
+		}
+		
     }
 }
