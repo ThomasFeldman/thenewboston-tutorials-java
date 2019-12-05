@@ -2,20 +2,32 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Peach extends JPanel{
+public class Peach extends JFrame{
 	
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		this.setBackground(Color.WHITE);
+	private JButton b;
+	private Color color = (Color.WHITE);
+	private JPanel panel;
+	
+	public Peach() {
+		super("the title");
+		panel = new JPanel();
+		panel.setBackground(color);
 		
-		g.setColor(Color.BLUE);
-		g.fillRect(25, 25, 100, 30);
-		
-		g.setColor(new Color(190, 81, 215));
-		g.fillRect(25, 65, 100, 30);
-		
-		g.setColor(Color.RED);
-		g.drawString("this is some tecxt", 25, 120);
-		
+		b = new JButton("Choose a color");
+		b.addActionListener(
+			new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					color = JColorChooser.showDialog(null, "Pick your color", color);
+					if(color==null) {
+						color=(Color.WHITE);
+					}
+					panel.setBackground(color);
+				}
+			}	
+		);
+		add(panel, BorderLayout.CENTER);
+		add(b, BorderLayout.SOUTH);
+		setSize(425,150);
+		setVisible(true);
 	}
 }
