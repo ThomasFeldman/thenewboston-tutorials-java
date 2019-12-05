@@ -1,17 +1,17 @@
-import javax.swing.*;
-import java.awt.*;
-
 public class bucky {
 	public static void main(String args[]) {
 		
-		JFrame f = new JFrame("Title");
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		String a = "apples";
+		String b = "bucky";
+		String c = "BUCKY";
+		System.out.println(a.length());
 		
-		Peach p = new Peach();
-		p.setBackground(Color.WHITE);
-		f.add(p);
-		f.setSize(500, 270);
-		f.setVisible(true);
+		if(a.equals("apples")) {
+			System.out.println("it equals apples");
+		}
 		
+		if(b.equalsIgnoreCase(c)) {
+			System.out.println("buckys match");
+		}
 	}
 }
