@@ -1,17 +1,19 @@
 public class bucky {
 	public static void main(String args[]) {
 		
-		String a = "apples";
-		String b = "bucky";
-		String c = "BUCKY";
-		System.out.println(a.length());
+		String[] words = {"funk", "chunk", "furry", "baconator"};
 		
-		if(a.equals("apples")) {
-			System.out.println("it equals apples");
+		//startsWith
+		for(String w : words) {
+			if(w.startsWith("fu")) {
+				System.out.println(w + " strats with fu");
+			}
 		}
 		
-		if(b.equalsIgnoreCase(c)) {
-			System.out.println("buckys match");
+		for(String w: words) {
+			if(w.endsWith("unk")) {
+				System.out.println(w + " ends with unk");
+			}
 		}
 	}
 }
