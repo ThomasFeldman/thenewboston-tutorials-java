@@ -1,19 +1,9 @@
 public class bucky {
 	public static void main(String args[]) {
 		
-		String[] words = {"funk", "chunk", "furry", "baconator"};
+		String a = "Bacon ";
+		String b = "     monster     ";
 		
-		//startsWith
-		for(String w : words) {
-			if(w.startsWith("fu")) {
-				System.out.println(w + " strats with fu");
-			}
-		}
-		
-		for(String w: words) {
-			if(w.endsWith("unk")) {
-				System.out.println(w + " ends with unk");
-			}
-		}
+		System.out.println(b.trim());
 	}
 }
