@@ -20,7 +20,20 @@ public class bucky {
 		
 		//copy contents of list into lsitcopy
 		Collections.copy(listCopy, l);
+		System.out.println("Copy of list : ");
+		output(listCopy);
 		
-		
+		//fill collection with crap
+		Collections.fill(l, 'X');
+		System.out.println("After filling the lsit : ");
+		output(l);
 	}
+	private static void output(List<Character> thelist) {
+		
+		for(Character thing: thelist) {
+			System.out.printf("%s ", thing);
+		}
+		System.out.println();
+	}
+	
 }
