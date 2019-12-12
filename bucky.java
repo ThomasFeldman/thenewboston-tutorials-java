@@ -2,15 +2,24 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 		
-		String[] crap = {"apples", "lemons", "geese", "bacon", "youtube"};
-		List<String> l1 = Arrays.asList(crap);
+		//create an array and convert to lsit
+		Character[] ray = {'p', 'w', 'n'};
+		List<Character> l = Arrays.asList(ray);
+		System.out.println("List is : ");
+		output(l);
 		
-		Collections.sort(l1);
-		System.out.printf("%s\n", l1);
 		
+		//reverse and print out the lsit
+		Collections.reverse(l);
+		System.out.println("After reverse : ");
+		output(l);
 		
-		Collections.sort(l1, Collections.reverseOrder());
-		System.out.printf("%s\n", l1);
+		//createa new array and a new lsit
+		Character[] newRay = new Character[3];
+		List<Character> listCopy = Arrays.asList(newRay);
+		
+		//copy contents of list into lsitcopy
+		Collections.copy(listCopy, l);
 		
 		
 	}
