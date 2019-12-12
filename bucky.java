@@ -2,18 +2,16 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 		
-		String[] stuff = {"babies", "watermelong", "melons", "fudge"};
-		LinkedList<String> thelist = new LinkedList<String>(Arrays.asList(stuff));
+		String[] crap = {"apples", "lemons", "geese", "bacon", "youtube"};
+		List<String> l1 = Arrays.asList(crap);
 		
-		thelist.add("pumpikinf");
-		thelist.addFirst("firstthing");
+		Collections.sort(l1);
+		System.out.printf("%s\n", l1);
 		
-		//cponmvert back to an array
-		stuff = thelist.toArray(new String[thelist.size()]);
 		
-		for(String x: stuff) {
-			System.out.printf("%s ", x);
-		}
+		Collections.sort(l1, Collections.reverseOrder());
+		System.out.printf("%s\n", l1);
+		
 		
 	}
 }
