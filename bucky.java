@@ -21,5 +21,19 @@ public class bucky {
 		for(String x: list2) {
 			System.out.printf("%s ", x);
 		}
+		System.out.println();
+		
+		System.out.println(Collections.frequency(list2, "digg"));
+		
+		boolean tof = Collections.disjoint(list1, list2);
+		
+		System.out.println(tof);
+		
+		if(tof) {
+			System.out.println("these lsit do not have anythign in common");
+		}else {
+			System.out.println("Thes elist must have somthig in common");
+		}
+		
 	}
 }
