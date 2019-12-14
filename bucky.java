@@ -2,29 +2,19 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 	
-		Stack<String> stack = new Stack<String>();
-		stack.push("bottom");
-		printStack(stack);
-		stack.push("second");
-		printStack(stack);
-		stack.push("third");
-		printStack(stack);
+		PriorityQueue<String> q = new PriorityQueue<String>();
 		
-		stack.pop();
-		printStack(stack);
-		stack.pop();
-		printStack(stack);
-		stack.pop();
-		printStack(stack);
+		q.offer("first");
+		q.offer("second");
+		q.offer("third");
 		
-	}
-	
-	private static void printStack(Stack<String> s) {
-		if(s.isEmpty()) {
-			System.out.println("you have njtihg nin ur stack");
-		}else {
-			System.out.printf("%s TOP\n" , s);
-		}
+		System.out.printf("%s ", q);
+		System.out.println();
 		
+		System.out.printf("%s ", q.peek());
+		System.out.println();
+		
+		q.poll();
+		System.out.printf("%s ", q);
 	}
 }
