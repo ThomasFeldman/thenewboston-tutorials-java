@@ -2,37 +2,28 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 	
-		//convert stuff array to alist
-		String[] stuff = {"apples", "beef", "corn", "ham"};
-		List<String> list1 = Arrays.asList(stuff);
+		Stack<String> stack = new Stack<String>();
+		stack.push("bottom");
+		printStack(stack);
+		stack.push("second");
+		printStack(stack);
+		stack.push("third");
+		printStack(stack);
 		
-		ArrayList<String> list2 = new ArrayList<String>();
-		list2.add("youtube");
-		list2.add("google");
-		list2.add("digg");
+		stack.pop();
+		printStack(stack);
+		stack.pop();
+		printStack(stack);
+		stack.pop();
+		printStack(stack);
 		
-		for(String x: list2) {
-			System.out.printf("%s ", x);
-		}
-		
-		Collections.addAll(list2, stuff);
-		
-		System.out.println();
-		for(String x: list2) {
-			System.out.printf("%s ", x);
-		}
-		System.out.println();
-		
-		System.out.println(Collections.frequency(list2, "digg"));
-		
-		boolean tof = Collections.disjoint(list1, list2);
-		
-		System.out.println(tof);
-		
-		if(tof) {
-			System.out.println("these lsit do not have anythign in common");
+	}
+	
+	private static void printStack(Stack<String> s) {
+		if(s.isEmpty()) {
+			System.out.println("you have njtihg nin ur stack");
 		}else {
-			System.out.println("Thes elist must have somthig in common");
+			System.out.printf("%s TOP\n" , s);
 		}
 		
 	}
