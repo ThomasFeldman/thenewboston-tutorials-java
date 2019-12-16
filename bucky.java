@@ -2,19 +2,13 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 	
-		PriorityQueue<String> q = new PriorityQueue<String>();
+		String[] things = {"apples", "bob", "ham", "bob", "bacon"};
+		List<String> list = Arrays.asList(things);
 		
-		q.offer("first");
-		q.offer("second");
-		q.offer("third");
-		
-		System.out.printf("%s ", q);
+		System.out.printf("%s ", list);
 		System.out.println();
 		
-		System.out.printf("%s ", q.peek());
-		System.out.println();
-		
-		q.poll();
-		System.out.printf("%s ", q);
+		Set<String> set = new HashSet<String>(list);
+		System.out.printf("%s ", set);
 	}
 }
