@@ -2,13 +2,24 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 	
-		String[] things = {"apples", "bob", "ham", "bob", "bacon"};
-		List<String> list = Arrays.asList(things);
+		Integer[] iray = {1,2,3,4};
+		Character[] cray = {'b','u','c','y'};
 		
-		System.out.printf("%s ", list);
+		printMe(iray);
+		printMe(cray);
+		
+	}
+	
+	public static void printMe(Integer[] i) {
+		for(Integer x: i) {
+			System.out.printf("%s ", x);
+		}
 		System.out.println();
-		
-		Set<String> set = new HashSet<String>(list);
-		System.out.printf("%s ", set);
+	}
+	public static void printMe(Character[] i) {
+		for(Character x: i) {
+			System.out.printf("%s ", x);
+		}
+		System.out.println();
 	}
 }
