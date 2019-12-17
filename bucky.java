@@ -2,19 +2,22 @@ import java.util.*;
 public class bucky {
 	public static void main(String args[]) {
 	
-		Integer[] iray = {1,2,3,4,5};
-		Character[] cray = {'b','u','c','k', 'y'};
-		
-		printMe(iray);
-		printMe(cray);
+		System.out.println(max(23, 42, 1));
+		System.out.println(max("apples", "tots", "chicken"));
 		
 	}
 	
-	//generic method
-	public static <T> void printMe (T[] x) {
-		for(T b : x) {
-			System.out.printf("%s ", b);
+	public static <T extends Comparable<T>> T max(T a, T b, T c) {
+		T m = a;
+		
+		if(b.compareTo(a) > 0) {
+			m = b;
 		}
-		System.out.println();
+		
+		if(c.compareTo(m) > 0) {
+			m = c;
+		}
+		
+		return m;
 	}
 }
