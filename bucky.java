@@ -6,4 +6,5 @@ public class bucky extends JApplet{
 		super.paint(g);
 		g.drawString("wow this actually worked?", 25, 25);
 	}
+	
 }
