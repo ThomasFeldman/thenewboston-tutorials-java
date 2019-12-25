@@ -11,5 +11,14 @@ public class BuckySites extends JApplet{
 	private ArrayList<String> titles;
 	private JList mainList;
 	
-	
+	//init
+	public void init() {
+		websiteInfo = new HashMap<String, URL>();
+		titles = new ArrayList<String>();
+		
+		grabHTMLInfo();
+		add(new JLabel("What website do you want to visit"), BorderLayout.NORTH);
+		mainList = new JList(titles.toArray());
+		
+	}
 }
