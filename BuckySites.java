@@ -20,5 +20,15 @@ public class BuckySites extends JApplet{
 		add(new JLabel("What website do you want to visit"), BorderLayout.NORTH);
 		mainList = new JList(titles.toArray());
 		
+		mainList.addListSelectionListener(
+				new ListSelectionListener(){
+					public void valueChanged(ListSelectionEvent event) {
+						Object object = mainList.getSelectedValue();
+						URL newDocument = websiteInfo.get(object);
+						AppletContext browser = getAppletContext();
+						browser.showDocument(newDocument);
+					}
+				}
+		);
 	}
 }
