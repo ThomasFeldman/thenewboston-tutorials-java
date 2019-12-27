@@ -31,4 +31,26 @@ public class BuckySites extends JApplet{
 				}
 		);
 	}
+	
+	//get website info
+	private void grabHTMLInfo() {
+		String title;
+		String address;
+		URL url;
+		int counter = 0;
+		title = getParameter("title"+counter);
+		
+		while(title != null) {
+			address = getParameter("address"+counter);
+			try {
+				url = new URL(address);
+				websiteInfo.put(title, url);
+				titles.add(title);
+			}catch(MalformedURLExeption urlException) {
+				urlException.printStackTrace();
+			}
+			++counter;
+			title = getParameter("title"+counter);
+		}
+	}
 }
