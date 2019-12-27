@@ -30,6 +30,7 @@ public class BuckySites extends JApplet{
 					}
 				}
 		);
+		add(new JScrollPane(mainList), BorderLayout.CENTER);
 	}
 	
 	//get website info
