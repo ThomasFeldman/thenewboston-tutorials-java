@@ -1,28 +1,23 @@
-import java.io.*;
-import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
-public class readfile {
-	private Scanner x;
+public class readfile extends JFrame{
+	private JTextField addressBar;
+	private JEditorPane display;
 	
-	public void openFile() {
-		try {
-			x = new Scanner(new File("chinese.txt"));
-		}
-		catch(Exception e) {
-			System.out.println("could not find file");
-		}
-	}
-	public void readFile() {
-		while(x.hasNext()){
-			String a = x.next();
-			String b = x.next();
-			String c = x.next();
-			
-			System.out.printf("%s %s %s\n", a,b,c);
-		}
-	}
-	
-	public void closeFile() {
-		x.close();
+	//constructor
+	public readfile() {
+		super("Bucky Browser");
+		
+		addressBar = new JTextField("enter a URL hoss!");
+		addressBar.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent event) {
+						loadCrap(event.getActionCommand());
+					}
+				}
+			);	
 	}
 }
