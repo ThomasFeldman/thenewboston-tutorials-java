@@ -18,6 +18,19 @@ public class readfile extends JFrame{
 						loadCrap(event.getActionCommand());
 					}
 				}
-			);	
+			);
+		add(addressBar, BorderLayout.NORTH);
+		
+		display = new JEditorPane();
+		display.setEditable(false);
+		display.addHyperlinkListener(
+			new HyperlinkListener() {
+				public void hyperlinkUpdate(HyperlinkEvent event) {
+					if(event.getEventType()==HyperlinkEvent.EventType.ACTIVATED) {
+						loadCrap(event.getURL().toString());
+					}
+				}
+			}
+		);
 	}
 }
